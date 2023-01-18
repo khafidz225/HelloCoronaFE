@@ -11,3 +11,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.container-card {
+  margin-top: 20px;
+  display: grid;
+  row-gap: 50px;
+  margin-left: 65px;
+  /* gap: 20px; */
+  grid-template-columns: auto auto auto auto;
+}
+
+.button-signin {
+  border-color: #FF6185 !important;
+  color: #FF6185 !important;
+  margin-right: 15px ;
+  width: 100px;
+}
+
+.card-shadow {
+  box-shadow: 4px 4px 4px rgba(5, 5, 5, 0.08);
+  border: none;
+}
