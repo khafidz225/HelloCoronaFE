@@ -33,7 +33,7 @@ const AddArticle = () => {
       formData.set("image", AddArticle.image[0], AddArticle.image[0].name);
       formData.set("description", AddArticle.description);
 
-      const response = await API.post("/article", formData, config);
+      const response = await API.post("/articles", formData, config);
 
       Swal.fire({
         position: "center",
