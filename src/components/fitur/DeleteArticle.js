@@ -52,6 +52,7 @@ const DeleteArticle = (props) => {
           >
             Cancel
           </Button>
+
           <Button
             className="border-0 fw-bold me-3"
             style={{ width: "100px", backgroundColor: "#FF6185" }}

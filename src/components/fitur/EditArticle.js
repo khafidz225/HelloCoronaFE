@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
+import Swal from "sweetalert2";
 import { API } from "../../config/api";
 
 const EditArticle = (props) => {
@@ -32,7 +33,13 @@ const EditArticle = (props) => {
       formData.set("description", person?.description);
 
       const response = await API.patch(`/article/${props.id}`, formData);
-      alert("berhasil");
+      Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "Successfully Edit Article",
+        showConfirmButton: false,
+        timer: 1500,
+      });
     } catch (error) {
       console.log(error);
       alert("gagal");

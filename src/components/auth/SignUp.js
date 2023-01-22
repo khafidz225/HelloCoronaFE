@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import { useMutation } from "react-query";
 import { useNavigate } from "react-router-dom";
 import { API } from "../../config/api";
+import Swal from "sweetalert2";
 
 const SignUp = () => {
   const [show, setShow] = useState(false);
@@ -32,7 +33,13 @@ const SignUp = () => {
 
       const response = await API.post("/register", body, config);
 
-      alert("Berhasil Cuk");
+      Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "Successfully Register",
+        showConfirmButton: false,
+        timer: 1500,
+      });
       Navigate("/");
     } catch (error) {
       alert("gagal Cuk");
